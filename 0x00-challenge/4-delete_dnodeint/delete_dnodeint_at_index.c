@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -44,7 +43,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	else
 	{
-		(*head)->prev->prev = (*head)->prev;
 		(*head)->prev->next = (*head)->next;
 		free(*head);
 		if ((*head)->next)
